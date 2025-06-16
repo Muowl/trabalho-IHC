@@ -1,0 +1,254 @@
+\documentclass[12pt, a4paper, oneside]{abntex2}
+
+% --- PACOTES UTILIZADOS ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{amsmath, amssymb}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{geometry}
+
+% hyperref é carregado por abntex2, configurar opções com \hypersetup
+% --- CONFIGURAÇÃO DAS MARGENS (Padrão ABNT) ---
+\geometry{
+    a4paper,
+    left=3cm,
+    right=2cm,
+    top=3cm,
+    bottom=2cm
+}
+
+% Configuração do hyperref (carregado pela classe abntex2)
+\hypersetup{hidelinks}
+
+% --- INFORMAÇÕES DO TRABALHO (Para Capa e Folha de Rosto) ---
+\titulo{Trabalho Parte I – Requisitos de IHC}
+\preambulo{Relatório de Pesquisa com Usuários e Documento de Especificação dos Requisitos do sistema de Apoio à Telemedicina}
+\autor{Felipe Lazzarini Cunha \\ Gabriel Campos Lima Alves}
+\instituicao{%
+  Universidade Federal de Juiz de Fora -- UFJF
+  \par
+  Instituto de Ciências Exatas
+  \par
+  Departamento de Ciência da Computação}
+% \logo{\includegraphics[width=3cm]{Imagens/ufjf-logo.png}}
+\makeatletter
+\providecommand{\disciplina}[1]{\gdef\@disciplina{#1}}
+\makeatother
+\disciplina{DCC174 -- Interação Humano-Computador}
+\local{Juiz de Fora}
+\data{Junho de 2025} % Conforme data de entrega
+
+% --- INÍCIO DO DOCUMENTO ---
+\begin{document}
+
+% --- ELEMENTOS PRÉ-TEXTUAIS ---
+% Substituindo \imprimircapa por uma capa personalizada
+\begin{capa}
+    \centering
+    \vspace*{2cm}
+    \begin{minipage}{0.2\textwidth}
+        \includegraphics[width=3cm]{Imagens/ufjf-logo.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.7\textwidth}
+        \raggedright
+        \textbf{UNIVERSIDADE FEDERAL DE JUIZ DE FORA} \\
+        \textbf{INSTITUTO DE CIÊNCIAS EXATAS} \\
+        \textbf{DEPARTAMENTO DE CIÊNCIA DA COMPUTAÇÃO (DCC)}
+    \end{minipage}
+    \vspace*{3cm}
+    \hrule
+    \vspace*{5cm}
+    \textbf{\Large DCC174 Interação Humano-Computador} \\
+    \vspace{2cm}
+    \textbf{\Large Trabalho Parte I – Requisitos de IHC} \\
+    \vspace{2cm}
+    Felipe Lazzarini Cunha \\
+    Gabriel Campos Lima Alves \\
+    \vfill
+    \vspace*{1cm}
+    \begin{center}
+    Juiz de Fora\\
+    Junho de 2025
+    \end{center}
+\end{capa}
+
+% Customizando a folha de rosto
+% \imprimirfolhaderosto
+\begin{folhaderosto}
+    \centering
+    \vspace*{2cm}
+    \begin{minipage}{0.2\textwidth}
+        \includegraphics[width=3cm]{Imagens/ufjf-logo.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.7\textwidth}
+        \raggedright
+        \textbf{UNIVERSIDADE FEDERAL DE JUIZ DE FORA} \\
+        \textbf{INSTITUTO DE CIÊNCIAS EXATAS} \\
+        \textbf{DEPARTAMENTO DE CIÊNCIA DA COMPUTAÇÃO}
+    \end{minipage}
+    \vspace*{3cm}
+    \textbf{\Large DCC174 Interação Humano-Computador} \\
+    \vspace{0.5cm}
+    \textbf{\Large Trabalho Parte I – Requisitos de IHC} \\
+    \vspace*{3cm}
+    Felipe Lazzarini Cunha \\
+    Gabriel Campos Lima Alves \\
+    \vspace*{3cm}
+    \hfill % Empurra o minipage para a direita
+    \begin{minipage}{0.6\textwidth} % Ajuste a largura conforme necessário
+        \raggedright % Para alinhar o texto à esquerda dentro da "caixa"
+        Relatório de Pesquisa com Usuários e Documento de Especificação dos Requisitos do sistema de Apoio à Telemedicina
+    \end{minipage}
+    \vfill
+    \vspace*{1cm}
+    \begin{center}
+    Juiz de Fora\\
+    Junho de 2025
+    \end{center}
+\end{folhaderosto}
+
+% --- SUMÁRIO (Gerado automaticamente) ---
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents
+\cleardoublepage
+
+% --- INÍCIO DOS ELEMENTOS TEXTUAIS ---
+\textual
+
+% =========================================================================
+% PARTE 1: PESQUISA COM USUÁRIOS
+% Conforme enunciado do trabalho e modelo de sumário.
+% =========================================================================
+\chapter{Pesquisa com Usuários}
+
+\section{Planejamento}
+\label{sec:planejamento}
+% Descrever aqui os objetivos da pesquisa, os métodos que vocês adotaram
+\lipsum[1]
+
+\subsection{Objetivos da Pesquisa}
+\lipsum[2]
+
+\subsection{Métodos Adotados e Justificativa}
+\lipsum[3]
+
+\section{Identificação dos Stakeholders}
+\label{sec:stakeholders}
+% Listar e descrever todos os stakeholders identificados.
+\lipsum[4]
+
+\section{Identificação dos Papis}
+\label{sec:papeis}
+% Descrever os papéis primários (interagem diretamente com o sistema) e secundários
+% (interagem por meio de outra pessoa). Pensar no papel do
+% médico generalista que registra a dúvida, o docente especialista que responde, etc.
+\lipsum[5]
+
+\section{Dados Coletados}
+\label{sec:dados_coletados}
+% Apresentar e analisar os dados que vocês coletaram na pesquisa.
+% Incluir os perfis de usuário e personas que vocês criaram a partir dos dados.
+% Lembrar de caracterizar os usuários com base nos critérios do documento.
+\lipsum[6]
+
+
+% =========================================================================
+% PARTE 2: DOCUMENTO DE REQUISITOS
+% =========================================================================
+\chapter{Documento de Requisitos}
+
+\section{Escopo do Sistema}
+\label{sec:escopo}
+% Descrever aqui os objetivos do sistema. Utilizar a descrição detalhada do
+% "Tema 1 – Aplicativo de Apoio à Telemedicina" fornecida no enunciado do
+% trabalho.
+% A plataforma alvo é Mobile.
+\lipsum[7]
+
+\section{Metas de Design}
+\label{sec:metas_design}
+% Descrever os objetivos dos usuários que o sistema deve apoiar e os
+% critérios de qualidade de uso (Usabilidade, Acessibilidade, etc.).
+% Exemplo: "Aumentar a eficiência das atividades dos usuários".
+% Exemplo: "Comunicar adequadamente, através da interface, a visão do designer".
+\lipsum[8]
+
+\section{Caracterização dos Usuários e dos Stakeholders}
+\label{sec:caracterizacao_usuarios}
+% Detalhar aqui as características dos usuários e stakeholders identificados
+% na Seção \ref{sec:stakeholders}. Utilizar o quadro resumo das informações que afetam o uso.
+% Criar perfis e/ou personas, conforme solicitado no enunciado.
+\lipsum[9]
+
+\section{Requisitos Funcionais}
+\label{sec:requisitos_funcionais}
+% Especificar cada requisito funcional (funcionalidade visível ao usuário)  
+% Usar o template da Tabela 1 do modelo.
+% Um requisito deve ter identificador, nome, stakeholders, pré-condições,
+% descrição e pós-condições.
+
+\lipsum[10]
+
+% --- Exemplo de tabela para Requisito Funcional ---
+% Use 'longtable' para que a tabela possa quebrar entre páginas se for muito grande.
+\begin{longtable}{|p{0.25\linewidth}|p{0.7\linewidth}|}
+    \caption{Exemplo de especificação de requisito funcional.} \label{tab:rf01_exemplo} \\
+    \hline
+    \multicolumn{2}{|l|}{\textbf{RF01: Efetuar Login}} \\
+    \hline
+    \endfirsthead
+    \multicolumn{2}{c}%
+    {{\bfseries\tablename\ \thetable{} -- continuação}} \\
+    \hline
+    \multicolumn{2}{|l|}{\textbf{RF01: Efetuar Login}} \\
+    \hline
+    \endhead
+    \hline \multicolumn{2}{r}{{\textit{Continua na próxima página}}} \\
+    \endfoot
+    \hline
+    \endlastfoot
+
+    % Conteúdo da tabela
+    \textbf{Interessado(s)/ Stakeholder(s):} & Usuário (Médico de UBS, Docente, Estudante de Medicina). \\
+    \hline
+    \textbf{Pré-condição(ões):} & O usuário deve possuir um cadastro ativo no sistema. \\
+    \hline
+    \textbf{Descrição:} & O usuário deverá efetuar o login no aplicativo informando suas credenciais (ex: e-mail ou CRM) e senha. Após informar os dados, o usuário deve pressionar o botão "Entrar". \\
+    \hline
+    \textbf{Pós-condição(ões):} & Caso o usuário informe credenciais válidas, o sistema fornece acesso à sua área restrita, com as funcionalidades correspondentes ao seu perfil. Caso contrário, o sistema informa uma mensagem de erro. \\
+    \hline
+\end{longtable}
+
+% Adicione outras tabelas para os demais requisitos funcionais aqui.
+% Ex: RF02: Registrar Dúvida, RF03: Enviar Dúvida, RF04: Responder Dúvida.
+
+\section{Requisitos Não Funcionais}
+\label{sec:requisitos_nao_funcionais}
+% Descrever os requisitos não funcionais, que são restrições aos serviços ou
+% funcionalidades.
+% Exemplo: "o sistema deverá fornecer uma resposta ao usuário em até 2 segundos
+% após uma tentativa de login".
+% Pode incluir requisitos de portabilidade, tecnologia, usabilidade, segurança, etc.
+\lipsum[11]
+
+\section{Restrições do Sistema}
+\label{sec:restricoes}
+% Especificar as restrições tecnológicas, de compatibilidade com plataformas,
+% interoperabilidade com outros sistemas, etc..
+\lipsum[12]
+
+
+% --- ELEMENTOS PÓS-TEXTUAIS (Referências, Apêndices, etc.) ---
+\postextual
+
+% --- BIBLIOGRAFIA ---
+\bibliography{referencias} % Cria um arquivo 'referencias.bib' para gerenciar suas fontes.
+
+\end{document}

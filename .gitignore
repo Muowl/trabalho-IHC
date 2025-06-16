@@ -1,0 +1,37 @@
+# LaTeX auxiliary files
+*.aux
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+*.fls
+*.log
+*.lof
+*.lot
+*.fdb_latexmk
+*.out
+*.toc
+*.synctex.gz
+*.synctex
+*.nav
+*.snm
+*.vrb
+
+# Build directory
+_build/
+
+# Other common files
+*.pdf # Depending on whether you want to track the PDF or not
+*.bbl
+*.blg
+*.brf
+*.ilg
+*.ind
+*.idx
+*.tdo
+*.run.xml
+*-blx.bib
+*.bcf
