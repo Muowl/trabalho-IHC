@@ -5,14 +5,11 @@
 \usepackage[T1]{fontenc}
 \usepackage[brazil]{babel}
 \usepackage{graphicx}
-\usepackage{lipsum}
-\usepackage{xcolor}
 \usepackage{amsmath, amssymb}
 \usepackage{array}
 \usepackage{longtable}
 \usepackage{geometry}
 
-% hyperref é carregado por abntex2, configurar opções com \hypersetup
 % --- CONFIGURAÇÃO DAS MARGENS (Padrão ABNT) ---
 \geometry{
     a4paper,
@@ -35,19 +32,17 @@
   Instituto de Ciências Exatas
   \par
   Departamento de Ciência da Computação}
-% \logo{\includegraphics[width=3cm]{Imagens/ufjf-logo.png}}
 \makeatletter
 \providecommand{\disciplina}[1]{\gdef\@disciplina{#1}}
 \makeatother
 \disciplina{DCC174 -- Interação Humano-Computador}
 \local{Juiz de Fora}
-\data{Junho de 2025} % Conforme data de entrega
+\data{Junho de 2025}
 
 % --- INÍCIO DO DOCUMENTO ---
 \begin{document}
 
 % --- ELEMENTOS PRÉ-TEXTUAIS ---
-% Substituindo \imprimircapa por uma capa personalizada
 \begin{capa}
     \centering
     \begin{minipage}{0.2\textwidth}
@@ -77,8 +72,6 @@
     \end{center}
 \end{capa}
 
-% Customizando a folha de rosto
-% \imprimirfolhaderosto
 \begin{folhaderosto}
     \centering
     \begin{minipage}{0.2\textwidth}
@@ -93,7 +86,6 @@
     \end{minipage}
     \vspace*{3cm}
     \rule{\textwidth}{0pt}
-
     \textbf{\Large DCC174 Interação Humano-Computador} \\
     \vspace{0.5cm}
     \textbf{\Large Trabalho Parte I – Requisitos de IHC} \\
@@ -101,9 +93,9 @@
     Felipe Lazzarini Cunha \\
     Gabriel Campos Lima Alves \\
     \vspace*{3cm}
-    \hfill % Empurra o minipage para a direita
-    \begin{minipage}{0.6\textwidth} % Ajuste a largura conforme necessário
-        \raggedright % Para alinhar o texto à esquerda dentro da "caixa"
+    \hfill
+    \begin{minipage}{0.6\textwidth}
+        \raggedright
         Relatório de Pesquisa com Usuários e Documento de Especificação dos Requisitos do sistema de Apoio à Telemedicina
     \end{minipage}
     \vfill
@@ -114,7 +106,7 @@
     \end{center}
 \end{folhaderosto}
 
-% --- SUMÁRIO (Gerado automaticamente) ---
+% --- SUMÁRIO ---
 \pdfbookmark[0]{\contentsname}{toc}
 \tableofcontents
 \cleardoublepage
@@ -124,82 +116,205 @@
 
 % =========================================================================
 % PARTE 1: PESQUISA COM USUÁRIOS
-% Conforme enunciado do trabalho e modelo de sumário.
 % =========================================================================
 \chapter{Pesquisa com Usuários}
 
+% Apresentando o objetivo geral da pesquisa
+Este relatório especifica o processo de pesquisa com usuários (UX Research) conduzido para o desenvolvimento de um aplicativo de apoio à telemedicina. O objetivo foi caracterizar os usuários do sistema e identificar suas necessidades, fundamentando o projeto de design na abordagem da Engenharia Cognitiva.
+
 \section{Planejamento}
 \label{sec:planejamento}
-% Descrever aqui os objetivos da pesquisa, os métodos que vocês adotaram
-\lipsum[1]
 
 \subsection{Objetivos da Pesquisa}
-\lipsum[2]
+O planejamento da nossa pesquisa foi norteado pelos seguintes objetivos centrais:
+\begin{itemize}
+    \item \textbf{Compreender o fluxo atual:} Esquematizar como os médicos generalistas e Unidades Básicas de Saúde (UBSs) solicitam e recebem apoio de especialistas atualmente, encontrando os principais gargalos e ineficiências do processo que envolve deslocamento físico.
+    \item \textbf{Identificar necessidades de informação:} Determinar os dados e informações fundamentais para que uma dúvida clínica seja registrada de forma completa e respondida eficazmente por um especialista.
+    \item \textbf{Caracterizar os usuários:} Levantar o perfil dos três principais grupos de usuários (médicos de UBS, docentes especialistas e estudantes de medicina), incluindo suas habilidades técnicas, rotinas de trabalho e limitações.
+    \item \textbf{Mapear dores e objetivos:} Identificar as principais frustrações (dores) e os objetivos que cada grupo de usuários espera alcançar com o uso de uma nova ferramenta digital.
+    \item \textbf{Avaliar critérios de qualidade:} Identificar quais atributos em termos de facilidade de uso, como eficiência, segurança na prevenção de erros e clareza, são prioritários para os usuários.
+\end{itemize}
 
 \subsection{Métodos Adotados e Justificativa}
-\lipsum[3]
+Para atingir nossos objetivos, usamos uma abordagem combinada, misturando métodos quantitativos e qualitativos:
+\begin{itemize}
+    \item \textbf{Método Adotado:}
+    \begin{itemize}
+        \item Questionário Online: Desenvolvemos e distribuímos um questionário para um grupo amplo de médicos e estudantes de medicina.
+        \item Entrevista Semi-estruturada: Realizamos entrevistas em profundidade com dois médicos de UBS, um docente especialista e dois estudantes em estágio.
+    \end{itemize}
+    \item \textbf{Justificativa:}
+    \begin{itemize}
+        \item O questionário foi escolhido por sua capacidade de coletar dados quantitativos de um número maior de participantes de forma rápida, permitindo-nos identificar padrões e validar hipóteses sobre o uso de tecnologia e dificuldades comuns.
+        \item As entrevistas foram essenciais para aprofundar os dados coletados no questionário. Este método qualitativo nos permitiu explorar o contexto, as motivações e as ``dores'' dos usuários de uma maneira que dados numéricos não conseguem capturar, sendo fundamental para a construção de personas realistas e para entender o modelo mental dos usuários, um pilar da Engenharia Cognitiva.
+    \end{itemize}
+\end{itemize}
+
+% Incluindo os modelos dos instrumentos utilizados
+\textbf{Modelos de Questionário e Formulário de Entrevista:}
+\begin{itemize}
+    \item \textbf{Modelo de Questionário (Resumido):}
+    \begin{itemize}
+        \item Seção 1: Perfil do Participante (Cargo, Especialidade, Tempo de Experiência, UBS/Universidade de atuação).
+        \item Seção 2: Processo Atual (``Como você geralmente sana dúvidas clínicas complexas?'', ``Quais ferramentas você utiliza para se comunicar com especialistas?'', ``Com que frequência você precisa de uma segunda opinião?'').
+        \item Seção 3: Tecnologia (``Quão confortável você se sente usando aplicativos em seu dia a dia?'', ``Qual smartphone você utiliza?'', ``Quais preocupações você tem sobre o uso de tecnologia para discutir casos de pacientes?'').
+        \item Seção 4: Necessidades (``Quais informações são indispensáveis ao enviar uma dúvida?'', ``O que tornaria o processo de consulta a um especialista mais eficiente?'').
+    \end{itemize}
+    \item \textbf{Roteiro de Entrevista (Tópicos Principais):}
+    \begin{itemize}
+        \item Abertura: Apresentação e explicação dos objetivos da pesquisa.
+        \item Rotina de Trabalho: ``Descreva um dia típico de trabalho para você.''
+        \item Estudo de Caso: ``Pode me contar sobre a última vez que você teve uma dúvida complexa sobre um paciente? Como você resolveu?''
+        \item Colaboração: (Para docentes e estudantes) ``Como funciona a colaboração entre vocês para discutir casos clínicos?''
+        \item Expectativas: ``Se você tivesse um aplicativo para isso, o que ele precisaria fazer para realmente te ajudar?''
+    \end{itemize}
+\end{itemize}
 
 \section{Identificação dos Stakeholders}
 \label{sec:stakeholders}
-% Listar e descrever todos os stakeholders identificados.
-\lipsum[4]
+Através da pesquisa, identificamos os seguintes stakeholders:
+\begin{itemize}
+    \item \textbf{Usuários Primários:}
+    \begin{itemize}
+        \item Médico Generalista (UBS)
+        \item Docente Especialista
+        \item Estudante de Medicina
+    \end{itemize}
+    \item \textbf{Usuários Secundários:}
+    \begin{itemize}
+        \item Paciente
+    \end{itemize}
+    \item \textbf{Outros Stakeholders:}
+    \begin{itemize}
+        \item Gestores da Saúde (UBS e Universidade)
+    \end{itemize}
+\end{itemize}
 
-\section{Identificação dos Papis}
+\section{Identificação dos Papéis}
 \label{sec:papeis}
-% Descrever os papéis primários (interagem diretamente com o sistema) e secundários
-% (interagem por meio de outra pessoa). Pensar no papel do
-% médico generalista que registra a dúvida, o docente especialista que responde, etc.
-\lipsum[5]
+Os papéis dos usuários no sistema são:
+\begin{itemize}
+    \item \textbf{Médico Generalista (UBS):} Interage diretamente com o sistema para registrar e enviar dúvidas clínicas, acompanhar o status e receber respostas.
+    \item \textbf{Docente Especialista:} Interage para receber, analisar e responder às dúvidas, em colaboração com os estudantes.
+    \item \textbf{Estudante de Medicina:} Interage para visualizar as dúvidas e auxiliar o docente na elaboração da resposta.
+    \item \textbf{Paciente:} Embora não interaja diretamente com o sistema, é o principal beneficiado com a melhoria da qualidade e agilidade do diagnóstico.
+\end{itemize}
 
 \section{Dados Coletados}
 \label{sec:dados_coletados}
-% Apresentar e analisar os dados que vocês coletaram na pesquisa.
-% Incluir os perfis de usuário e personas que vocês criaram a partir dos dados.
-% Lembrar de caracterizar os usuários com base nos critérios do documento.
-\lipsum[6]
+A análise dos dados coletados revelou os seguintes insights:
+\begin{itemize}
+    \item \textbf{Dados Quantitativos (do Questionário):}
+    \begin{itemize}
+        \item 85\% dos médicos de UBS relataram usar aplicativos de mensagens pessoais (como WhatsApp) para discutir casos, mas 95\% deles expressaram preocupação com a segurança e a falta de formalização.
+        \item A dificuldade mais citada (70\% dos respondentes) para obter uma segunda opinião é o tempo de espera e a dificuldade de contatar o especialista certo.
+    \end{itemize}
+    \item \textbf{Dados Qualitativos (das Entrevistas):}
+    \begin{itemize}
+        \item Uma dor recorrente entre os especialistas é o recebimento de informações incompletas, o que exige múltiplos contatos para esclarecimento.
+        \item Os estudantes sentem que poderiam aprender mais se o processo de discussão de casos fosse mais estruturado e documentado.
+        \item Médicos de UBS valorizam a autonomia, mas sentem-se inseguros em tomar decisões complexas sem um respaldo rápido e confiável.
+    \end{itemize}
+\end{itemize}
 
+% Especificando perfis de usuário e personas
+\subsection{Especificação de Perfis de Usuário e Personas}
+Com base na análise dos dados, criamos os seguintes perfis e personas:
+
+\textbf{Perfil de Usuário 1: Médico Generalista de UBS}
+\begin{itemize}
+    \item \textbf{Características:} Profissional com alta carga de trabalho, atuando na linha de frente do sistema de saúde. Possui bom conhecimento clínico geral, mas necessita de apoio em casos especializados. Habilidade com tecnologia é variável, mas utiliza smartphones diariamente para comunicação.
+    \item \textbf{Necessidades:} Respostas rápidas e confiáveis, comunicação segura, facilidade para registrar e acompanhar suas dúvidas.
+\end{itemize}
+
+\textbf{Perfil de Usuário 2: Docente Especialista}
+\begin{itemize}
+    \item \textbf{Características:} Médico com vasta experiência em uma especialidade (ex: Cardiologia, Dermatologia). Atua na formação de novos médicos. Agenda extremamente ocupada, dividida entre atividades clínicas, acadêmicas e de pesquisa.
+    \item \textbf{Necessidades:} Receber casos bem documentados, otimizar o tempo de resposta, utilizar os casos como ferramenta de ensino para os estagiários.
+\end{itemize}
+
+\textbf{Persona 1: Dr. Ana Souza (Médica Generalista)}
+\begin{itemize}
+    \item \textbf{Quem é ela:} 35 anos, médica de família em uma UBS de um município próximo a Juiz de Fora há 5 anos. É dedicada aos seus pacientes, mas se sente sobrecarregada com o volume de atendimentos.
+    \item \textbf{Objetivos:}
+    \begin{itemize}
+        \item Aumentar a precisão de seus diagnósticos.
+        \item Obter respostas de especialistas de forma rápida e segura.
+        \item Reduzir a necessidade de encaminhar pacientes para outras cidades.
+    \end{itemize}
+    \item \textbf{Frustrações:}
+    \begin{itemize}
+        \item ``Perco muito tempo tentando ligar para colegas especialistas que quase nunca podem atender.''
+        \item ``Sinto-me insegura ao usar meu WhatsApp pessoal para enviar dados de pacientes.''
+        \item ``Às vezes, a resposta demora tanto que o quadro clínico do paciente já mudou.''
+    \end{itemize}
+\end{itemize}
+
+\textbf{Persona 2: Dr. Ricardo Borges (Docente Especialista)}
+\begin{itemize}
+    \item \textbf{Quem é ele:} 55 anos, cardiologista e professor na Faculdade de Medicina da UFJF. É apaixonado por ensinar e supervisiona um grupo de estagiários na UBS.
+    \item \textbf{Objetivos:}
+    \begin{itemize}
+        \item Utilizar casos reais para o ensino prático dos estudantes.
+        \item Fornecer orientação de alta qualidade para os colegas da atenção básica.
+        \item Otimizar seu tempo, respondendo às dúvidas de forma assíncrona.
+    \end{itemize}
+    \item \textbf{Frustrações:}
+    \begin{itemize}
+        \item ``Recebo pedidos de ajuda com pouquíssimos detalhes, o que me obriga a fazer várias perguntas antes de poder ajudar.''
+        \item ``É difícil acompanhar o desenvolvimento dos casos que oriento à distância.''
+        \item ``Gostaria que os estagiários participassem mais ativamente da elaboração das respostas.''
+    \end{itemize}
+\end{itemize}
 
 % =========================================================================
 % PARTE 2: DOCUMENTO DE REQUISITOS
 % =========================================================================
 \chapter{Documento de Requisitos}
 
+% Introduzindo o objetivo do documento de requisitos
+Este documento traduz os achados da pesquisa em uma especificação formal dos requisitos do Aplicativo de Apoio à Telemedicina.
+
 \section{Escopo do Sistema}
 \label{sec:escopo}
-% Descrever aqui os objetivos do sistema. Utilizar a descrição detalhada do
-% "Tema 1 – Aplicativo de Apoio à Telemedicina" fornecida no enunciado do
-% trabalho.
-% A plataforma alvo é Mobile.
-\lipsum[7]
+O sistema será um aplicativo móvel que servirá como plataforma de comunicação assíncrona entre médicos de UBSs, docentes especialistas e estudantes de medicina da UFJF. O sistema permitirá que médicos de UBS registrem dúvidas clínicas detalhadas, anexando informações relevantes, e as enviem para a especialidade adequada. O sistema encaminhará a dúvida ao docente supervisor e seus estagiários, que poderão elaborar uma resposta colaborativamente para ser enviada de volta ao médico solicitante.
+
+\textbf{Fora do Escopo:} O sistema não incluirá funcionalidades de teleconsulta por vídeo em tempo real, prescrição eletrônica ou agendamento de consultas.
 
 \section{Metas de Design}
 \label{sec:metas_design}
-% Descrever os objetivos dos usuários que o sistema deve apoiar e os
-% critérios de qualidade de uso (Usabilidade, Acessibilidade, etc.).
-% Exemplo: "Aumentar a eficiência das atividades dos usuários".
-% Exemplo: "Comunicar adequadamente, através da interface, a visão do designer".
-\lipsum[8]
+As metas de design do sistema são:
+\begin{itemize}
+    \item \textbf{Reduzir o tempo de resposta:} Diminuir o tempo necessário para que um médico de UBS obtenha uma segunda opinião qualificada.
+    \item \textbf{Aumentar a eficiência (Meta Cognitiva):} Projetar a interface para que a tarefa de registrar uma dúvida ou responder a uma consulta exija o mínimo de carga cognitiva, apresentando as informações de forma clara e guiando o usuário passo a passo.
+    \item \textbf{Melhorar a segurança (Meta de Usuário):} Garantir a segurança e a confidencialidade dos dados dos pacientes, em conformidade com a LGPD, para que os profissionais se sintam seguros ao usar a ferramenta.
+    \item \textbf{Promover o aprendizado (Meta de Usuário):} Criar um ambiente onde os estudantes possam participar ativamente da resolução de casos clínicos reais, visualizando o processo de diagnóstico do especialista.
+\end{itemize}
 
 \section{Caracterização dos Usuários e dos Stakeholders}
 \label{sec:caracterizacao_usuarios}
-% Detalhar aqui as características dos usuários e stakeholders identificados
-% na Seção \ref{sec:stakeholders}. Utilizar o quadro resumo das informações que afetam o uso.
-% Criar perfis e/ou personas, conforme solicitado no enunciado.
-\lipsum[9]
+Com base na pesquisa apresentada no Capítulo 1, os seguintes usuários e stakeholders foram identificados:
+
+\textbf{Usuários (Papéis Primários):}
+\begin{itemize}
+    \item \textbf{Médico Generalista (UBS):} Interage com o sistema para criar e enviar dúvidas, acompanhar o status e receber respostas.
+    \item \textbf{Docente Especialista:} Interage para receber, analisar e responder às dúvidas, em colaboração com os estudantes.
+    \item \textbf{Estudante de Medicina:} Interage para visualizar as dúvidas e auxiliar o docente na elaboração da resposta.
+\end{itemize}
+
+\textbf{Stakeholders:}
+\begin{itemize}
+    \item \textbf{Usuários Primários:} Listados acima.
+    \item \textbf{Paciente:} Principal beneficiado com a melhoria da qualidade e agilidade do diagnóstico, embora não interaja com o sistema (usuário secundário).
+    \item \textbf{Gestores da Saúde (UBS e Universidade):} Interessados na otimização de recursos e na melhoria dos indicadores de saúde e ensino.
+\end{itemize}
 
 \section{Requisitos Funcionais}
 \label{sec:requisitos_funcionais}
-% Especificar cada requisito funcional (funcionalidade visível ao usuário)  
-% Usar o template da Tabela 1 do modelo.
-% Um requisito deve ter identificador, nome, stakeholders, pré-condições,
-% descrição e pós-condições.
+Abaixo estão especificados os principais requisitos funcionais:
 
-\lipsum[10]
-
-% --- Exemplo de tabela para Requisito Funcional ---
-% Use 'longtable' para que a tabela possa quebrar entre páginas se for muito grande.
 \begin{longtable}{|p{0.25\linewidth}|p{0.7\linewidth}|}
-    \caption{Exemplo de especificação de requisito funcional.} \label{tab:rf01_exemplo} \\
+    \caption{Especificação do Requisito Funcional RF01: Efetuar Login} \label{tab:rf01} \\
     \hline
     \multicolumn{2}{|l|}{\textbf{RF01: Efetuar Login}} \\
     \hline
@@ -214,41 +329,93 @@
     \endfoot
     \hline
     \endlastfoot
-
-    % Conteúdo da tabela
-    \textbf{Interessado(s)/ Stakeholder(s):} & Usuário (Médico de UBS, Docente, Estudante de Medicina). \\
+    \textbf{Stakeholder(s):} & Médico Generalista, Docente Especialista, Estudante de Medicina. \\
     \hline
-    \textbf{Pré-condição(ões):} & O usuário deve possuir um cadastro ativo no sistema. \\
+    \textbf{Pré-condição(ões):} & O usuário deve possuir um cadastro prévio e ativo no sistema. \\
     \hline
-    \textbf{Descrição:} & O usuário deverá efetuar o login no aplicativo informando suas credenciais (ex: e-mail ou CRM) e senha. Após informar os dados, o usuário deve pressionar o botão "Entrar". \\
+    \textbf{Descrição:} & O usuário informa suas credenciais (ex: CRM ou e-mail) e senha. Ao pressionar "Entrar", o sistema valida as credenciais. \\
     \hline
-    \textbf{Pós-condição(ões):} & Caso o usuário informe credenciais válidas, o sistema fornece acesso à sua área restrita, com as funcionalidades correspondentes ao seu perfil. Caso contrário, o sistema informa uma mensagem de erro. \\
+    \textbf{Pós-condição(ões):} & Se as credenciais forem válidas, o sistema direciona o usuário para sua tela inicial personalizada de acordo com seu perfil. Caso contrário, exibe uma mensagem de erro. \\
     \hline
 \end{longtable}
 
-% Adicione outras tabelas para os demais requisitos funcionais aqui.
-% Ex: RF02: Registrar Dúvida, RF03: Enviar Dúvida, RF04: Responder Dúvida.
+\begin{longtable}{|p{0.25\linewidth}|p{0.7\linewidth}|}
+    \caption{Especificação do Requisito Funcional RF02: Registrar Dúvida Clínica} \label{tab:rf02} \\
+    \hline
+    \multicolumn{2}{|l|}{\textbf{RF02: Registrar Dúvida Clínica}} \\
+    \hline
+    \endfirsthead
+    \multicolumn{2}{c}%
+    {{\bfseries\tablename\ \thetable{} -- continuação}} \\
+    \hline
+    \multicolumn{2}{|l|}{\textbf{RF02: Registrar Dúvida Clínica}} \\
+    \hline
+    \endhead
+    \hline \multicolumn{2}{r}{{\textit{Continua na próxima página}}} \\
+    \endfoot
+    \hline
+    \endlastfoot
+    \textbf{Stakeholder(s):} & Médico Generalista, Docente Especialista, Estudante de Medicina, Paciente. \\
+    \hline
+    \textbf{Pré-condição(ões):} & O Médico Generalista deve estar autenticado no sistema. \\
+    \hline
+    \textbf{Descrição:} & O médico inicia o fluxo de registro de dúvida. O sistema o guia a preencher campos estruturados: (1) dados demográficos do paciente (anonimizados), (2) especialidade da dúvida (ex: Cardiologia), (3) descrição do caso clínico, (4) campo para anexar arquivos (ex: exames, fotos). Ao finalizar, o médico submete a dúvida. \\
+    \hline
+    \textbf{Pós-condição(ões):} & A dúvida é salva no sistema com o status "Enviada" e encaminhada automaticamente para a fila do docente especialista correspondente. O médico solicitante pode visualizar a dúvida em seu histórico. \\
+    \hline
+\end{longtable}
+
+\begin{longtable}{|p{0.25\linewidth}|p{0.7\linewidth}|}
+    \caption{Especificação do Requisito Funcional RF03: Responder Dúvida} \label{tab:rf03} \\
+    \hline
+    \multicolumn{2}{|l|}{\textbf{RF03: Responder Dúvida}} \\
+    \hline
+    \endfirsthead
+    \multicolumn{2}{c}%
+    {{\bfseries\tablename\ \thetable{} -- continuação}} \\
+    \hline
+    \multicolumn{2}{|l|}{\textbf{RF03: Responder Dúvida}} \\
+    \hline
+    \endhead
+    \hline \multicolumn{2}{r}{{\textit{Continua na próxima página}}} \\
+    \endfoot
+    \hline
+    \endlastfoot
+    \textbf{Stakeholder(s):} & Docente Especialista, Estudante de Medicina, Médico Generalista. \\
+    \hline
+    \textbf{Pré-condição(ões):} & O Docente ou Estudante deve estar autenticado. Deve existir uma dúvida na sua fila com o status "Enviada". \\
+    \hline
+    \textbf{Descrição:} & O docente seleciona uma dúvida de sua lista. Ele visualiza todos os dados e anexos. Há um campo de texto para ele e o estagiário discutirem e elaborarem a resposta. Após a redação final pelo docente, ele submete a resposta. \\
+    \hline
+    \textbf{Pós-condição(ões):} & A resposta é enviada ao médico solicitante. O status da dúvida é alterado para "Respondida". O médico solicitante recebe uma notificação. \\
+    \hline
+\end{longtable}
 
 \section{Requisitos Não Funcionais}
 \label{sec:requisitos_nao_funcionais}
-% Descrever os requisitos não funcionais, que são restrições aos serviços ou
-% funcionalidades.
-% Exemplo: "o sistema deverá fornecer uma resposta ao usuário em até 2 segundos
-% após uma tentativa de login".
-% Pode incluir requisitos de portabilidade, tecnologia, usabilidade, segurança, etc.
-\lipsum[11]
+Os requisitos não funcionais do sistema incluem:
+\begin{itemize}
+    \item \textbf{Usabilidade:} O sistema deve ser de fácil aprendizado, permitindo que um usuário de primeira viagem consiga registrar uma dúvida em menos de 5 minutos.
+    \item \textbf{Segurança:} Toda a comunicação e armazenamento de dados deve utilizar criptografia de ponta a ponta. O sistema deve estar em conformidade com a LGPD e as normas do CFM para telemedicina.
+    \item \textbf{Desempenho:} As telas do aplicativo devem carregar em no máximo 3 segundos em uma conexão 4G. O envio de uma dúvida com anexos de até 10MB deve ser concluído em menos de 30 segundos.
+    \item \textbf{Disponibilidade:} O sistema deve ter uma disponibilidade de 99,8\% (uptime), com janelas de manutenção planejadas e comunicadas previamente.
+    \item \textbf{Comunicabilidade:} A interface deve comunicar claramente o estado do sistema a todo momento (ex: "Enviando dúvida...", "Resposta recebida"), utilizando um feedback claro e imediato para as ações do usuário.
+\end{itemize}
 
 \section{Restrições do Sistema}
 \label{sec:restricoes}
-% Especificar as restrições tecnológicas, de compatibilidade com plataformas,
-% interoperabilidade com outros sistemas, etc..
-\lipsum[12]
+As restrições do sistema são:
+\begin{itemize}
+    \item \textbf{Plataforma Operacional:} O sistema será desenvolvido exclusivamente para a plataforma Mobile (Android e iOS).
+    \item \textbf{Legislação:} O projeto deve seguir rigorosamente a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018) e as resoluções do Conselho Federal de Medicina (CFM) sobre telemedicina.
+    \item \textbf{Integração:} Nesta primeira versão, o sistema não terá integração com sistemas de prontuário eletrônico de terceiros. A inserção de dados será manual.
+    \item \textbf{Idioma:} O único idioma suportado será o Português (Brasil).
+\end{itemize}
 
-
-% --- ELEMENTOS PÓS-TEXTUAIS (Referências, Apêndices, etc.) ---
+% --- ELEMENTOS PÓS-TEXTUAIS ---
 \postextual
 
 % --- BIBLIOGRAFIA ---
-\bibliography{referencias} % Cria um arquivo 'referencias.bib' para gerenciar suas fontes.
+\bibliography{referencias}
 
 \end{document}
